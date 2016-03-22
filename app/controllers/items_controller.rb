@@ -13,6 +13,7 @@ class ItemsController < ApplicationController
   end
 
   def show
+    @have_users = Want.all.find(params[:user])
   end
 
   private
