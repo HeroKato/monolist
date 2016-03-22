@@ -1,3 +1,8 @@
+<% content_for :head do %>
+<title>アイテムを追加</title>
+<meta name="description" content="お好みのキーワードで検索してモノを追加しましょう！">
+<% end %>
+
 <div class="search">
   <%= form_tag new_item_path , method: :get do %>
     <%= text_field_tag :q , params[:q], placeholder: "キーワードを入力", required: true %>

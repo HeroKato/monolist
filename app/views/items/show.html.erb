@@ -1,3 +1,8 @@
+<% content_for :head do %>
+<title><%= @item.title %> - 詳細</title>
+<meta name="description" content="<%= @item.title %>の詳細ページ。<%= @item.title %>の詳細を表示しています。">
+<% end %>
+
 <div class="container">
   <div class="container-inner inner-sm clearfix">
     <div class="item-single-main">
@@ -18,7 +23,6 @@
         <h4 class="side-box-title">Haveしたユーザー</h4>
         <div class="side-box-body">
           <% # TODO Haveしたユーザー一覧 %>
-
         </div>
       </div>
       <div class="side-box">

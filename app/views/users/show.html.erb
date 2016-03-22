@@ -1,3 +1,8 @@
+<% content_for :head do %>
+<title><%= @user.name %> - プロフィール</title>
+<meta name="description" content="<%= @user.name %>さんのプロフィールページです。<%= @user.name %>さんの欲しいモノや持っているモノが表示されています。">
+<% end %>
+
 <%= render 'profile' , user: @user %>
 
 
