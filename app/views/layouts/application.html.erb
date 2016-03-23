@@ -3,12 +3,6 @@
 <head>
   <% if content_for?(:head) %>
     <%= yield :head %>
-  <% elsif logged_in? %>
-    <title><%= current_user.name %>- Monolist</title>
-    <meta name="discription" content="素敵なモノと出会える場所。それがMonolistです。" />
-  <% else %>
-    <title>Monolist</title>
-    <meta name="discription" content="素敵なモノと出会える場所。それがMonolistです。" />
   <% end %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
