@@ -16,7 +16,7 @@
           <% if item.large_image.present? %>
             <%= link_to(image_tag(item.large_image, class: "img-rounded", alt: item.title ), item) %>
           <% else %>
-            <%= image_tag("no-image.png" , alt: item.title) %>
+            <%= link_to(image_tag("no-image.png" , class: "img-rounded", alt: item.title), item) %>
           <% end %>
         </div>
       </div>
