@@ -3,12 +3,12 @@
 <meta name="description" content="<%= @type %>のランキングページ。<%= @type %>数の多いものから１０件のモノを表示しています">
 <% end %>
 
-<% @rankings.each_with_index do |(item,count), rank| %>
+<% @rankings.each.with_index(1) do |(item,count), rank | %>
   <% if item != nil %>
-    <div id="item-<%= rank+1 %>" class="ranking-items" >
+    <div id="item-<%= rank %>" class="ranking-items" >
       <div class="row">
         <div class="col-md-4 col-md-offset-4">
-          <h1>No.<%= rank+1 %>:<%= @ranking_item.find(item).title %></h1>
+          <h1>No.<%= rank %>:<%= item.title %></h1>
           <h2>
           <% if type = "have" %>
             Have:<%= count %>
@@ -20,7 +20,7 @@
       </div>
       <div class="row">
         <div class="col-md-4 col-md-offset-4">
-            <%= link_to(image_tag(@ranking_item.find(item).large_image, class: "img-rounded", alt: @ranking_item.find(item).title ), @ranking_item.find(item)) %>
+            <%= link_to(image_tag(item.large_image, class: "img-rounded", alt: item.title ), item) %>
         </div>
       </div>
     </div>
