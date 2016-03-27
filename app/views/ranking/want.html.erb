@@ -3,4 +3,6 @@
 <div class="col-md-12 want-title">
   <h1>Want数ランキング</h1>
 </div>
-<%= render "rankings" %>
+<% @rankings.each_with_index do |(item,count), rank| %>
+  <%= render "rankings" %> 
+<% end %>
