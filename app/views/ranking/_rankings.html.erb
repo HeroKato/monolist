@@ -5,10 +5,10 @@
 
 <% @rankings.each_with_index do |(item,count), rank| %>
   <% if item != nil %>
-    <div id="item-<%= rank %>" class="ranking-items" >
+    <div id="item-<%= rank+1 %>" class="ranking-items" >
       <div class="row">
         <div class="col-md-4 col-md-offset-4">
-          <h1>No.<%= rank %>:<%= @ranking_item.find(item).title %></h1>
+          <h1>No.<%= rank+1 %>:<%= @ranking_item.find(item).title %></h1>
           <h2>
           <% if type = "have" %>
             Have:<%= count %>
